@@ -6,7 +6,7 @@ variable "random_name_suffix" {
 
 variable "rg" {
   type = object({
-    name = string
+    name     = string
     location = string
   })
 }
