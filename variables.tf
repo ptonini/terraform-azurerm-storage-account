@@ -1,9 +1,5 @@
 variable "name" {}
 
-variable "random_name_suffix" {
-  default = true
-}
-
 variable "rg" {
   type = object({
     name     = string
@@ -11,18 +7,39 @@ variable "rg" {
   })
 }
 
+variable "randomize_name" {
+  default  = true
+  nullable = false
+}
+
 variable "storage_account_tier" {
-  default = "Standard"
+  default  = "Standard"
+  nullable = false
 }
 
 variable "storage_account_replication_type" {
-  default = "GRS"
+  default  = "LRS"
+  nullable = false
 }
 
 variable "queue_encryption_key_type" {
-  default = "Service"
+  default  = "Service"
+  nullable = false
 }
 
 variable "table_encryption_key_type" {
-  default = "Service"
+  default  = "Service"
+  nullable = false
+}
+
+variable "infrastructure_encryption_enabled" {
+  default  = true
+  nullable = false
+}
+
+variable "containers" {
+  type = map(object({
+    access_type = string
+  }))
+  default = {}
 }
