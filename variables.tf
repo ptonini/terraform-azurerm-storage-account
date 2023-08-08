@@ -12,12 +12,12 @@ variable "randomize_name" {
   nullable = false
 }
 
-variable "storage_account_tier" {
+variable "account_tier" {
   default  = "Standard"
   nullable = false
 }
 
-variable "storage_account_replication_type" {
+variable "account_replication_type" {
   default  = "LRS"
   nullable = false
 }

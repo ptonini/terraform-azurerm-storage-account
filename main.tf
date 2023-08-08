@@ -10,8 +10,8 @@ resource "azurerm_storage_account" "this" {
   name                              = var.randomize_name ? substr("${var.name}${random_id.this[0].dec}", 0, 24) : var.name
   resource_group_name               = var.rg.name
   location                          = var.rg.location
-  account_tier                      = var.storage_account_tier
-  account_replication_type          = var.storage_account_replication_type
+  account_tier                      = var.account_tier
+  account_replication_type          = var.account_replication_type
   queue_encryption_key_type         = var.queue_encryption_key_type
   table_encryption_key_type         = var.table_encryption_key_type
   infrastructure_encryption_enabled = var.infrastructure_encryption_enabled
