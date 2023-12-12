@@ -20,7 +20,8 @@ resource "azurerm_storage_account" "this" {
       tags["business_unit"],
       tags["environment"],
       tags["product"],
-      tags["subscription_type"]
+      tags["subscription_type"],
+      tags["environment_finops"]
     ]
   }
 }
